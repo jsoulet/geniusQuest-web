@@ -1,0 +1,38 @@
+.ChallengeListItem {
+
+  margin: 15px auto;
+}
+.ChallengeListItem > .content {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.ChallengeListItem > .content:before {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.3);
+    opacity:1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.ChallengeListItem img {
+  flex: none;
+}
+
+.ChallengeListItem .title {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.ChallengeListItem .title a {
+  color: white;
+  text-decoration: none;
+}

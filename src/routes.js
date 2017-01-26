@@ -1,11 +1,11 @@
 import challengeService from './ChallengeService';
 import ChallengeView from './ChallengeView';
-import ChallengeList from './ChallengeList';
+import ChallengeListView from './ChallengeListView';
 
 export default [{
     name: 'challenges',
     url: '/challenges',
-    component: ChallengeList,
+    component: ChallengeListView,
     resolve: [{
       token: 'challenges',
       resolveFn: () => challengeService.getAllChallenges()

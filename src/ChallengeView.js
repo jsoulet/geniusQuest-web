@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import {UISref} from 'ui-router-react';
+import AchievementList from './AchievementList/AchievementList';
 
 class ChallengeView extends Component {
 
@@ -8,7 +9,10 @@ class ChallengeView extends Component {
       return (
     <div className="ChallengeView">
       <UISref to="challenges"><a>Campagin list</a></UISref>
-      <div>{challenge.title_en}</div>
+      <div><img src={challenge.photo} alt={challenge.title_en}/></div>
+      <div>{challenge.title_en} | {challenge.points}pts</div>
+      <div>{challenge.description_en}</div>
+      <AchievementList achievements={challenge.achievements}/>
     </div>
     );
   }

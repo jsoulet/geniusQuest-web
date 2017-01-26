@@ -1,5 +1,14 @@
-body {
+.app {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  padding-top: 35px;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
 }

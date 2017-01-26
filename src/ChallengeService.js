@@ -1,5 +1,3 @@
-// @TODO : Use real API calls
-import challenges from './ChallengesSource';
 import request from 'superagent';
 const BASE_URI = 'https://geniusquest.iadvize.net/api';
 
