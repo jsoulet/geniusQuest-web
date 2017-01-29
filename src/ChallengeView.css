@@ -8,7 +8,7 @@
   color: white;
 }
 
-.header > .content:before {
+.header > .overlay {
     content:'\A';
     position:absolute;
     width:100%; height:100%;

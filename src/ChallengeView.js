@@ -14,6 +14,7 @@ class ChallengeView extends Component {
     <div className="ChallengeView row">
       <div className="col-xs-12 col-md-8 col-md-offset-2">
         <div className="header" style={{backgroundImage: `url('${challenge.photo}')`}}>
+            <div className="overlay"/>
             <div className="title">{challenge.title_en} | {challenge.points}pts</div>
             <AvatarGroup pictures={challenge.achievements.map((achievement) => achievement.userPhoto)}/>
         </div>
