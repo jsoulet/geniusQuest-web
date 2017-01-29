@@ -1,0 +1,17 @@
+.AchievementListItem {
+  position: relative;
+}
+
+.achievementPhoto {
+  height: 150px;
+  background: #2a2e3a center center no-repeat;
+  background-size: cover;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.Avatar {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+}

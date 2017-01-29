@@ -1,25 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {UIRouter, UIView, pushStateLocationPlugin} from 'ui-router-react';
+import {UIRouter, UIView,UISref, UISrefActive, pushStateLocationPlugin} from 'ui-router-react';
 import routes from './routes';
 
 ReactDOM.render(
-	<div>
-		<nav className="navbar navbar-default navbar-fixed-top">
-			<div className="container">
-				<div className="navbar-header">
-					<div className="navbar-brand">Genius Quest</div>
-				</div>
-			</div>
-		</nav>
+	<UIRouter states={routes} plugins={[pushStateLocationPlugin]}>
+		<div>
+			<nav className="navbar navbar-default navbar-fixed-top">
+				<div className="container">
+					<div className="navbar-header">
+						<div className="navbar-brand">Genius Quest</div>
+						<ul className="nav navbar-nav navbar-right">
+			        <li>
+								<UISrefActive class="hidden">
+									<UISref to="challenges">
+										 <a><i className="glyphicon glyphicon-menu-left"></i></a>
+									</UISref>
+								</UISrefActive>
+							</li>
+		      	</ul>
 
-		<div className="app">
-			<UIRouter states={routes} plugins={[pushStateLocationPlugin]}>
-				<UIView/>
-			</UIRouter>
+					</div>
+				</div>
+			</nav>
+
+			<div className="app">
+					<UIView/>
+			</div>
 		</div>
-	</div>,
+	</UIRouter>,
 
 	document.getElementById('root')
 	);

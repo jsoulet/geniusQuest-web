@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import ChallengeListItem from './ChallengeListItem'
-
+import './ChallengeList.css';
 
 export default class ChallengeList extends Component {
   render() {

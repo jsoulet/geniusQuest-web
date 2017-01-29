@@ -1,0 +1,10 @@
+.Avatar {
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+.Avatar, .Avatar > img {
+  height: 30px;
+  width: 30px;
+}
