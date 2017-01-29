@@ -16,3 +16,7 @@
 .backArrow {
   margin-left: 15px;
 }
+
+.navbar-fixed-top {
+    z-index: 999;
+}

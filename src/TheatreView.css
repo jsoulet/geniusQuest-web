@@ -1,0 +1,10 @@
+.TheatreViewCaption > *{
+  float: left;
+}
+
+.TheatreViewCaption .authorName {
+  float: left;
+  display: block;
+  line-height: 30px;
+  margin-left: 10px;
+}
