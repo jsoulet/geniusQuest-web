@@ -1,0 +1,25 @@
+.AvatarGroup > * {
+    float: left;
+    color: white;
+}
+
+.remainingAvatars {
+  margin-left: 3px;
+  line-height: 30px;
+  font-size: 13px;
+  letter-spacing: -2px;
+}
+
+.displayedAvatars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.AvatarGroup .displayedAvatars .Avatar {
+  margin-right: -15px;
+}
+
+.AvatarGroup .displayedAvatars .Avatar:first-child {
+  margin-right: 0;
+}

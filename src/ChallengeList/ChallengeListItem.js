@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {UISref} from 'ui-router-react';
+import AvatarGroup from '../AvatarGroup/AvatarGroup';
 import './ChallengeListItem.css';
 
 export default class ChallengeListItem extends Component {
@@ -12,6 +13,7 @@ export default class ChallengeListItem extends Component {
             <div className="title">
               <a>{this.props.challenge.title_en} | {this.props.challenge.points}pts</a>
             </div>
+            <AvatarGroup pictures={this.props.challenge.achievements.map((a) => a.userPhoto)}/>
           </div>
       </UISref>
       </div>

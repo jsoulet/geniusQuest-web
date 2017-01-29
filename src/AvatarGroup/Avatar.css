@@ -3,6 +3,8 @@
   overflow: hidden;
   border-radius: 20px;
   border: 1px solid white;
+  background: #2a2e3a center center no-repeat;
+  background-size: cover;
 }
 .Avatar, .Avatar > img {
   height: 30px;

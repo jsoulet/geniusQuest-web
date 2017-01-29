@@ -1,17 +1,21 @@
 import React, { Component, PropTypes } from 'react';
 import {UISref} from 'ui-router-react';
+import _ from 'lodash';
 import AchievementList from './AchievementList/AchievementList';
+import AvatarGroup from './AvatarGroup/AvatarGroup';
 import './ChallengeView.css';
 
 class ChallengeView extends Component {
 
   render() {
       const {challenge} = this.props.resolves;
+      challenge.achievements = _.chain(challenge.achievements).sortBy('createdDate').reverse().value();
       return (
     <div className="ChallengeView row">
       <div className="col-xs-12 col-md-8 col-md-offset-2">
         <div className="header" style={{backgroundImage: `url('${challenge.photo}')`}}>
             <div className="title">{challenge.title_en} | {challenge.points}pts</div>
+            <AvatarGroup pictures={challenge.achievements.map((achievement) => achievement.userPhoto)}/>
         </div>
         <div className="description">{challenge.description_en}</div>
         <AchievementList achievements={challenge.achievements}/>

@@ -15,7 +15,7 @@ ReactDOM.render(
 			        <li>
 								<UISrefActive class="hidden">
 									<UISref to="challenges">
-										 <a><i className="glyphicon glyphicon-menu-left"></i></a>
+										 <a><i className="glyphicon glyphicon-menu-left backArrow"></i></a>
 									</UISref>
 								</UISrefActive>
 							</li>

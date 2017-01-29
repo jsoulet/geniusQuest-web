@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.achievementPhoto {
+.AchievementListItem .achievementPhoto {
   height: 150px;
   background: #2a2e3a center center no-repeat;
   background-size: cover;
@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-.Avatar {
+.AchievementListItem .Avatar {
   position: absolute;
   left: 25px;
   bottom: 25px;

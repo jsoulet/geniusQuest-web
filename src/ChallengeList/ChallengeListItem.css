@@ -35,3 +35,9 @@
   color: white;
   text-decoration: none;
 }
+
+.ChallengeListItem .AvatarGroup {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

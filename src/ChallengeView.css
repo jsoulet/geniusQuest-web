@@ -31,3 +31,10 @@
 .description {
   padding: 10px;
 }
+
+.ChallengeView .AvatarGroup {
+  padding-right: 15px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
