@@ -18,7 +18,6 @@ class TheatreView extends Component {
           onMovePrevRequest={() => this.props.transition.router.stateService.go('challenge.theatre', {achievementId:achievement.previous.id})}
           onMoveNextRequest={() => this.props.transition.router.stateService.go('challenge.theatre', {achievementId:achievement.next.id})}
           imageCaption={<div className="TheatreViewCaption"><Avatar picture={achievement.userPhoto}/><span className="authorName">{achievement.name}</span></div>}
-
       />
     </div>
     );

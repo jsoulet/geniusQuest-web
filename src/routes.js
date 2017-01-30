@@ -2,6 +2,7 @@ import challengeService from './ChallengeService';
 import ChallengeView from './ChallengeView';
 import ChallengeListView from './ChallengeListView';
 import TheatreView from './TheatreView';
+import PresentationView from './PresentationView';
 import _ from 'lodash'
 
 export default [{
@@ -22,7 +23,7 @@ export default [{
       deps: ['$transition$'],
       resolveFn: (trans) => {
         const challenge = challengeService.getChallenge(trans.params().challengeId);
-        challenge.achievements = _.chain(challenge.achievements).sortBy('createdDate').reverse().value();
+        challenge.achievements = _.chain(challenge.achievements).sortBy('createdDate').reverse().take(40).value();
         return challenge;
       }
     }]
@@ -40,6 +41,22 @@ export default [{
         achievement.previous = achievementIndex === 0 ? _.last(challenge.achievements) : challenge.achievements[achievementIndex - 1];
         achievement.next = achievementIndex === challenge.achievements.length - 1 ? _.head(challenge.achievements) : challenge.achievements[achievementIndex + 1];
         return achievement;
+      }
+    }]
+  },
+  {
+    name: 'presentation',
+    url: '/presentation',
+    component: PresentationView,
+    resolve: [{
+      token: 'achievements',
+      resolveFn: () => {
+        return challengeService
+          .getAllChallenges()
+          .then((challenges) => {
+            return challenges.reduce((result, challenge) => _.concat(result, challenge.achievements), [])
+          })
+          .then((achievements) => _.chain(achievements).sortBy('createdDate').reverse().take(40).value());
       }
     }]
   }
