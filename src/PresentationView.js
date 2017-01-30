@@ -8,7 +8,7 @@ class PresentationView extends Component {
       this.references.forEach((element, index) => {
         setTimeout(function(element) {
         element.style.display = 'initial';
-        }, index * 1800, element);
+      }, index * 1800, element);
       });
   }//<img className="achievement" style={{left, top}} src={achievement.photo} alt={achievement.id}/>;
   render() {
