@@ -54,7 +54,7 @@ export default [{
         return challengeService
           .getAllChallenges()
           .then((challenges) => {
-            return challenges.reduce((result, challenge) => _.concat(result, challenge.achievements), [])
+            return challenges.reduce((result, challenge) => _.concat(result, challenge.achievements.map((achievement) => _.assign({}, achievement, {title_en: challenge.title_en}))), [])
           })
           .then((achievements) => _.chain(achievements).sortBy('createdDate').reverse().take(30).value());
       }

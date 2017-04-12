@@ -8,7 +8,10 @@ class PresentationItem extends Component {
 
     return (<div className={`col-xs-4`}>
       <div className={`PresentationItem bounceIn`} style={{backgroundImage:`url('${achievement.photo}')`}} ref={(e) => {this.domElement = e;}}>
-          <div className="author">
+          <div className="data questName">
+            {achievement.title_en}
+          </div>
+          <div className="data author">
               <Avatar picture={achievement.userPhoto}/><span className="authorName">{achievement.name}</span>
           </div>
       </div>
