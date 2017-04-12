@@ -56,7 +56,7 @@ export default [{
           .then((challenges) => {
             return challenges.reduce((result, challenge) => _.concat(result, challenge.achievements), [])
           })
-          .then((achievements) => _.chain(achievements).sortBy('createdDate').reverse().take(40).value());
+          .then((achievements) => _.chain(achievements).sortBy('createdDate').reverse().take(30).value());
       }
     }]
   }

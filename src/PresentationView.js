@@ -4,33 +4,20 @@ import Avatar from './AvatarGroup/Avatar';
 import './PresentationView.css';
 
 class PresentationView extends Component {
-  componentDidMount() {
-      this.references.forEach((element, index) => {
-        setTimeout(function(element) {
-        element.style.display = 'initial';
-      }, index * 1800, element);
-      });
-  }//<img className="achievement" style={{left, top}} src={achievement.photo} alt={achievement.id}/>;
   render() {
       return (
-        <div className="PresentationView">
+        <div className="container">
+        <div className="PresentationView row">
           {this.props.resolves.achievements.map((achievement, i) => {
-            const left = Math.floor((Math.random() * 100) + 1).toFixed(2) + '%';
-            const top = Math.floor((Math.random() * 100) + 1).toFixed(2) + '%';
-            const num = Math.floor((Math.random() * 10) + 1);
-            return <div key={i} className={`PresentationItem x${num}`} style={{backgroundImage:`url('${achievement.photo}')`, left, top}} ref={(e) => {
-              if(_.isUndefined(this.references)) {
-                this.references = [];
-              }
-              this.references[i] = e;
-              return this.references;
-            }}>
+            return <div className={`col-xs-4`} key={i}>
+            <div className={`PresentationItem`} style={{backgroundImage:`url('${achievement.photo}')`}}>
                 <div className="author">
                     <Avatar picture={achievement.userPhoto}/><span className="authorName">{achievement.name}</span>
                 </div>
-
+            </div>
             </div>
           })}
+        </div>
         </div>
     );
   }
