@@ -149,6 +149,10 @@
 }
 */
 /* OBJECTS */
+
+.PresentationView {
+    perspective: 900px;
+}
 .PresentationItem {
   /*box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);*/
   /*position: absolute;*/
@@ -159,11 +163,11 @@
   margin-top: 30px;
   background: #2a2e3a center center no-repeat;
   background-size: cover;
-}
-.bounceIn {
-  animation-name: bounceIn;
-  animation-duration: 450ms;
-  animation-timing-function: linear;
+  transform-origin: center center;
+
+  animation-name: flip;
+  animation-duration: 650ms;
+  animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
 
@@ -212,6 +216,16 @@
   100%{
     opacity: 1;
     transform: scale(1) translate3d(0,0,0);
+  }
+}
+
+@keyframes flip{
+  0% {
+    transform: rotateY(-90deg);
+  }
+
+  100% {
+    transform: rotateY(0);
   }
 }
 
