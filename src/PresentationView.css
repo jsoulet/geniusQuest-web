@@ -157,9 +157,16 @@
   /*width: 300px;*/
   height: 400px;
   margin-top: 30px;
-  background: white center center no-repeat;
+  background: #2a2e3a center center no-repeat;
   background-size: cover;
 }
+.bounceIn {
+  animation-name: bounceIn;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
 
 .PresentationItem .author {
   position: absolute;
@@ -179,6 +186,25 @@
 .PresentationItem .authorName {
   margin-left: 10px;
   line-height: 30px;
+}
+
+@keyframes bounceIn{
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
 }
 
 /*.PresentationItem:after {
