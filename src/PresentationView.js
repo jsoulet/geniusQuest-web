@@ -20,7 +20,13 @@ class PresentationView extends Component {
   }
 
   tick() {
-    const randomIndex = _.random(this.state.displayedAchievements.length - 1);
+    let randomIndex = -1;
+    do {
+        randomIndex = _.random(this.state.displayedAchievements.length - 1);
+    } while (randomIndex === this.randomIndex);
+    this.randomIndex = randomIndex;
+
+
     const newDisplayed = _.map(this.state.displayedAchievements, (achievement, index) => {
       if (index === randomIndex) {
         return _.head(this.state.remainingAchievements);
@@ -63,5 +69,7 @@ PresentationView.propTypes = {
     achievement: PropTypes.object
   }),
 };
+
+PresentationView.randomIndex = -1;
 
 export default PresentationView;
