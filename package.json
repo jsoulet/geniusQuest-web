@@ -1,6 +1,7 @@
 {
   "name": "geniusQuest",
   "version": "0.1.0",
+  "homepage": "http://geniusquest.iadvize.net/web",
   "private": true,
   "devDependencies": {
     "eslint-plugin-react": "^6.9.0",

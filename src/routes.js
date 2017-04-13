@@ -7,7 +7,7 @@ import _ from 'lodash'
 
 export default [{
     name: 'challenges',
-    url: '/challenges',
+    url: '/web/challenges',
     component: ChallengeListView,
     resolve: [{
       token: 'challenges',
@@ -16,7 +16,7 @@ export default [{
   },
   {
     name: 'challenge',
-    url: '/challenges/:challengeId',
+    url: '/web/challenges/:challengeId',
     component: ChallengeView,
     resolve: [{
       token: 'challenge',
@@ -30,7 +30,7 @@ export default [{
   },
   {
     name: 'challenge.theatre',
-    url: '/theatre/:achievementId',
+    url: '/web/theatre/:achievementId',
     component: TheatreView,
     resolve: [{
       token: 'achievement',
@@ -46,7 +46,7 @@ export default [{
   },
   {
     name: 'presentation',
-    url: '/presentation',
+    url: '/web/presentation',
     component: PresentationView,
     resolve: [{
       token: 'achievements',
