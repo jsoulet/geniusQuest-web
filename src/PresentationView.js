@@ -55,7 +55,16 @@ class PresentationView extends Component {
               clearInterval(this.timerID)
             }
             return <PresentationItem achievement={achievement} key={i + '-' + achievement.id}/>})}
+            <div className="catchPhrase row">
+              <div className="col-xs-12 title">
+                Grab your phone and share your best pictures with Genius Quest App
+              </div>
+              <div className="cta col-xs-12">
+                Our app is available both on Android and iOS. Download it now on <a href="http://geniusquest.iadvize.net" target="_blank">geniusquest.iadvize.net</a>
+              </div>
+            </div>
         </div>
+
         <div className="buffer">
           {remainingAchievements.map((achievement, i) => <span key={achievement.id} style={{backgroundImage:`url('${achievement.photo}')`}}/>)}
         </div>
